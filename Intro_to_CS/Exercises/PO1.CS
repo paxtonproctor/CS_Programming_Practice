@@ -18,5 +18,15 @@ class Program {
       Console.WriteLine ("-" + (i+=1));
       Console.WriteLine (i+1);
     }
+
+    // DateTime
+    DateTime now = DateTime.Now;
+    Console.WriteLine (now);
+    Console.ReadLine();
+    
+    // Write age + 10
+    Console.WriteLine ("Enter your age");
+    string age = Console.ReadLine();
+    Console.WriteLine (int.Parse(age) + 10);
   }
 }
