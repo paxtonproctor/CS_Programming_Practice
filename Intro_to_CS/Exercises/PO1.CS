@@ -28,5 +28,13 @@ class Program {
     Console.WriteLine ("Enter your age");
     string age = Console.ReadLine();
     Console.WriteLine (int.Parse(age) + 10);
+    
+    // Write a Program that compares two real numbers with precision of .000001
+    Console.WriteLine ("First Number: ");
+    String A = Console.ReadLine();
+    Console.WriteLine ("Second Number: ");
+    String B = Console.ReadLine();
+    bool equal = Math.Abs(double.Parse(A) - double.Parse(B)) < 0.000001;
+    Console.WriteLine (equal);
   }
 }
