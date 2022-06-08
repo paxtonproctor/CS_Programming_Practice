@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFA25627-31BB-4C65-BE6F-ED7101039197}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinUSBSecondtime</RootNamespace>
+    <AssemblyName>WinUSBSecondtime</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MigraDoc.DocumentObjectModel-gdi, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc-gdi.1.50.5147\lib\net20\MigraDoc.DocumentObjectModel-gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering-gdi, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc-gdi.1.50.5147\lib\net20\MigraDoc.Rendering-gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering-gdi, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc-gdi.1.50.5147\lib\net20\MigraDoc.RtfRendering-gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Pdf, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c167629db8cf8ad9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Pdf.2.0.0\lib\net452\OxyPlot.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=245eacd6b5d2d338, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.WindowsForms.2.0.0\lib\net45\OxyPlot.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-gdi, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc-gdi.1.50.5147\lib\net20\PdfSharp-gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting-gdi, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc-gdi.1.50.5147\lib\net20\PdfSharp.Charting-gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\DBGraphics.cs" />
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGraph.designer.cs">
+      <DependentUpon>FormGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLineFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLineFormat.designer.cs">
+      <DependentUpon>FormLineFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Line.cs" />
+    <Compile Include="lbIndustrialCntrls\Base\LBIndustrialCtrlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Base\LBIndustrialCtrlBase.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Base\Renderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Button\ButtonRenderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Button\LBButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Button\LBButton.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Knob\KnobRenderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Knob\LBKnob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Knob\LBKnob.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Led\LB7SegmentDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Led\LB7SegmentDisplay.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Led\LB7SegmentDisplayRenderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Led\LBLed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Led\LBLed.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Led\LedRenderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Meters\LBAnalogMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Meters\LBAnalogMeter.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Meters\LBDigitalMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lbIndustrialCntrls\Meters\LBDigitalMeter.Designer.cs" />
+    <Compile Include="lbIndustrialCntrls\Meters\LBDigitalMeterRenderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Meters\LBMeterThreshold.cs" />
+    <Compile Include="lbIndustrialCntrls\Meters\MeterRenderer.cs" />
+    <Compile Include="lbIndustrialCntrls\Utils\ColorMng.cs" />
+    <Compile Include="lbIndustrialCntrls\Utils\MathFunc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\WINMM_Timer.cs" />
+    <Compile Include="Utilities\XMLFileOps.cs" />
+    <Compile Include="WinUSB\DeviceManagement.cs" />
+    <Compile Include="WinUSB\DeviceManagementApi.cs" />
+    <Compile Include="WinUSB\FileIOApi.cs" />
+    <Compile Include="WinUSB\WinUsbDevice.cs" />
+    <Compile Include="WinUSB\WinUsbDeviceApi.cs" />
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGraph.resx">
+      <DependentUpon>FormGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLineFormat.resx">
+      <DependentUpon>FormLineFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lbIndustrialCntrls\Button\LBButton.resx" />
+    <EmbeddedResource Include="lbIndustrialCntrls\Knob\LBKnob.resx" />
+    <EmbeddedResource Include="lbIndustrialCntrls\Led\LB7SegmentDisplay.resx" />
+    <EmbeddedResource Include="lbIndustrialCntrls\Led\LBLed.resx" />
+    <EmbeddedResource Include="lbIndustrialCntrls\Meters\LBDigitalMeter.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
